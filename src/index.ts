@@ -1,8 +1,10 @@
 import express, {Application} from 'express';
-const app: Application = express();
 import cors from 'cors';
 import homeRouter from './routes/home';
+import endpointsRouter from './routes/endpoints';
 
+const app: Application = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -10,8 +12,9 @@ app.use(express.urlencoded({extended: false}));
 
 // Routes
 
-app.get('/', homeRouter);
+app.use('/', homeRouter);
+app.use('/api', endpointsRouter);
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('Server running on port 3000');
 });
