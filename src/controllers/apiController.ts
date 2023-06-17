@@ -44,8 +44,25 @@ const commerceController = async (req: Request, res: Response) => {
     }
 }
 
+const artsController = async (req: Request, res: Response) => {
+    try {
+        const response = await axios.get(endpointCreator(1,100, "", "All", "12", "", false, false));
+        res.json(response.data);
+    } catch (error) {
+        res.json(error);
+    }
+}
+
+const scienceController = async (req: Request, res: Response) => {
+    try {
+        const response = await axios.get(endpointCreator(1,100, "", "All", "2", "", false, false));
+        res.json(response.data);
+    } catch (error) {
+        res.json(error);
+    }
+}
 
 
 
 
-export default {allCoursesController,hindiController,commerceController};
+export default {allCoursesController,hindiController,commerceController,artsController,scienceController};

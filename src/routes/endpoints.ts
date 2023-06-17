@@ -12,5 +12,6 @@ router.get('/', (req, res) => {
 router.get('/courses', apiController.allCoursesController)
 router.get('/courses/hindi', apiController.hindiController);
 router.get('/courses/commerce', apiController.commerceController);
-
+router.get('/courses/arts', apiController.artsController);
+router.get('/courses/science',apiController.scienceController)
 export default router;
