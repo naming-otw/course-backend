@@ -11,5 +11,6 @@ router.get('/', (req, res) => {
 // Endpoints
 router.get('/courses', apiController.allCoursesController)
 router.get('/courses/hindi', apiController.hindiController);
+router.get('/courses/commerce', apiController.commerceController);
 
 export default router;
