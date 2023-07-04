@@ -15,7 +15,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 // "https://www.real.discount/api-web/all-courses/?store=&page=1&per_page=10&orderby=undefined&free=1&search=&language=&cat=&subcat=&editorschoices=";
 const endpointCreator = (page, perPage, search, language, category, subcategory, free, editorsChoices) => {
-    let endpoint = "https://www.real.discount/api-web/all-courses/?store=Udemy&page=" + page + "&per_page=" + perPage + "&orderby=undefined&free=" + free + "&search=" + search + "&language=" + language + "&cat=" + category + "&subcat=" + subcategory + "&editorschoices=" + editorsChoices;
+    let endpoint = "https://www.real.discount/api-web/all-courses/?store=Udemy&page=" +
+        page +
+        "&per_page=" +
+        perPage +
+        "&orderby=undefined&free=" +
+        free +
+        "&search=" +
+        search +
+        "&language=" +
+        language +
+        "&cat=" +
+        category +
+        "&subcat=" +
+        subcategory +
+        "&editorschoices=" +
+        editorsChoices;
     return endpoint;
 };
 // All courses endpoints
@@ -64,5 +79,11 @@ const scienceController = (req, res) => __awaiter(void 0, void 0, void 0, functi
         res.json(error);
     }
 });
-exports.default = { allCoursesController, hindiController, commerceController, artsController, scienceController };
+exports.default = {
+    allCoursesController,
+    hindiController,
+    commerceController,
+    artsController,
+    scienceController,
+};
 //# sourceMappingURL=apiController.js.map
